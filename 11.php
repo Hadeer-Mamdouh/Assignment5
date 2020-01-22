@@ -8,6 +8,7 @@ $dbuser="root";
 $dbpassword="";
 $dbname="rout-company";   // check your DB name
 
+if(isset($_SESSION['mail'])){
 
 $conn= new mysqli ($servername,$dbuser,$dbpassword,$dbname);
 
@@ -114,7 +115,14 @@ echo "The ID of customer is not found";
 
 
 
+}
 
+else {
+    
+    	echo " Go <a href='login.php'>Login</a> <br/>";
+
+}
+?>
 
 
 
