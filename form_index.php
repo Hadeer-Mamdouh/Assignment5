@@ -1,5 +1,9 @@
 <? php
-
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $mail=$_POST['mail'];
+    $pass=$_POST['pass'];
+    $_SESSION['mail']=$mail;
+    $_SESSION['pass']=$pass;
 echo "Welcome to my First web site<br><br><br>";
 
 echo "Go to <br><br>
@@ -19,5 +23,11 @@ echo "Go to <br><br>
 <li><a href='assi1.php'>solve Question 12 </a></li>
 
 </ul>";
+}
+else 
+{
+	echo " Go <a href='login.php'>Login</a> <br/>";
+}
+
 
 ?>
