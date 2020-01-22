@@ -9,7 +9,7 @@ $dbuser="root";
 $dbpassword="";
 $dbname="rout-company";   // check your DB name
 
-
+if(isset($_SESSION['mail'])){
 $conn= new mysqli ($servername,$dbuser,$dbpassword,$dbname);
 
 
@@ -57,5 +57,10 @@ echo $rows["customerName"].$rows["creditLimit"]."<br>";
 else
 echo "The the name of city is  not found";
 
+else {
+    
+    	echo " Go <a href='login.php'>Login</a> <br/>";
 
+}
+?>
  
